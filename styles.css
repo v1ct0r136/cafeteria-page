@@ -1,0 +1,388 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #8B4513;
+    background-color: #F5F5DC;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+}
+
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #556B2F;
+}
+
+a {
+    color: #6B8E23;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #556B2F;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Ajusta el tamaño del logo según sea necesario */
+    border-radius: 50%; /* Hace que el logo sea circular */
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5F5DC;
+}
+
+/* Menú Hamburguesa (Responsive) */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-hamburguesa {
+        display: flex;
+    }
+
+    nav {
+        justify-content: flex-end; /* Alinea el navbar a la derecha */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #556B2F;
+        position: absolute;
+        top: 80px; /* Ajusta según la altura del header */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('images/cafe-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.btn {
+    background-color: #6B8E23;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #556B2F;
+}
+
+/* Especialidades Section */
+#especialidades {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.carrusel-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carrusel-btn.prev {
+    left: 10px;
+}
+
+.carrusel-btn.next {
+    right: 10px;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Testimonios Section */
+#testimonios {
+    background-color: #A0522D;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.testimonios-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonio {
+    width: 45%;
+    margin: 20px 0;
+}
+
+.testimonio p {
+    font-style: italic;
+}
+
+.testimonio cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #556B2F;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el Menú */
+.menu-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+}
+
+.precio {
+    color: #6B8E23;
+    font-weight: bold;
+}
+
+/* Estilos para Sobre Nosotros */
+.historia {
+    margin-bottom: 40px;
+}
+
+.equipo-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.miembro {
+    width: 45%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.miembro img {
+    width: 100%;
+    border-radius: 50%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para Eventos */
+.eventos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.evento {
+    width: 45%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.evento img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.fecha {
+    color: #6B8E23;
+    font-weight: bold;
+}
+
+/* Estilos para Contacto */
+.contacto-info {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #A0522D;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background-color: #6B8E23;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #556B2F;
+}

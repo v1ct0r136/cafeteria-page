@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería Delicioso Aroma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo de la Cafetería">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="menu-hamburguesa" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Bienvenido a Delicioso Aroma</h2>
+            <p>Disfruta de los mejores cafés y delicias en un ambiente único</p>
+            <a href="menu.html" class="btn">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="especialidades">
+        <div class="container">
+            <h2>Nuestras Especialidades</h2>
+            <div class="carrusel">
+                <div class="carrusel-inner">
+                    <div class="carrusel-item">
+                        <img src="images/cafe.jpg" alt="Café de Origen">
+                        <h3>Café de Origen</h3>
+                        <p>Café cultivado en las mejores regiones del mundo.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/postre.jpg" alt="Postres Caseros">
+                        <h3>Postres Caseros</h3>
+                        <p>Deliciosos postres hechos con ingredientes naturales.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/comida_saludable.jpg" alt="Desayunos Saludables">
+                        <h3>Desayunos Saludables</h3>
+                        <p>Comienza tu día con energía y sabor.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/comida_saludable.jpg" alt="Desayunos Saludables">
+                        <h3>Desayunos Saludables</h3>
+                        <p>Comienza tu día con energía y sabor.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/comida_saludable.jpg" alt="Desayunos Saludables">
+                        <h3>Desayunos Saludables</h3>
+                        <p>Comienza tu día con energía y sabor.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/comida_saludable.jpg" alt="Desayunos Saludables">
+                        <h3>Desayunos Saludables</h3>
+                        <p>Comienza tu día con energía y sabor.</p>
+                    </div>
+                </div>
+                <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contacto: Calle Principal 123, Ciudad | Tel: 123-456-7890 | Email: info@deliciosoaroma.com</p>
+            <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

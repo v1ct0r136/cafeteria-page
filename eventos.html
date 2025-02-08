@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Cafetería Delicioso Aroma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo de la Cafetería">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="menu-hamburguesa" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="eventos">
+        <div class="container">
+            <h2>Próximos Eventos</h2>
+            <div class="eventos-grid">
+                <div class="evento">
+                    <img src="images/jazz.jpg" alt="Noche de Jazz">
+                    <h3>Noche de Jazz</h3>
+                    <p>Disfruta de una noche relajante con música en vivo y bebidas especiales.</p>
+                    <p class="fecha">15 de Octubre, 2023</p>
+                </div>
+                <div class="evento">
+                    <img src="images/barista.jpg" alt="Taller de Barismo">
+                    <h3>Taller de Barismo</h3>
+                    <p>Aprende a preparar el café perfecto con nuestros expertos baristas.</p>
+                    <p class="fecha">22 de Octubre, 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contacto: Calle Principal 123, Ciudad | Tel: 123-456-7890 | Email: info@deliciosoaroma.com</p>
+            <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
