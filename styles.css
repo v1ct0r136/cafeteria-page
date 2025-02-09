@@ -22,9 +22,18 @@ body {
     flex: 1; /* Hace que el contenido ocupe el espacio restante */
 }
 
-h2, h3 {
+.hero-container-text {
+    color: #A0522D;
+}
+
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     color: #556B2F;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
 a {
@@ -261,7 +270,7 @@ footer {
     background-color: #556B2F;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 8px 0; /* Más compacto */
     margin-top: auto; /* Empuja el footer hacia abajo */
 }
 
@@ -305,12 +314,30 @@ footer a:hover {
 /* Estilos para Sobre Nosotros */
 .historia {
     margin-bottom: 40px;
+    text-align: center;
+}
+
+.container-historia-title {
+    font-size: 2.5em; /* Tamaño del título principal */
+    color: #556B2F;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.container-historia-text {
+    font-size: 1.2em; /* Tamaño del texto descriptivo */
+    color: #8B4513;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .equipo-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .miembro {
@@ -319,10 +346,25 @@ footer a:hover {
     text-align: center;
 }
 
+.miembro h3 {
+    font-size: 1.5em; /* Tamaño del nombre del miembro */
+    color: #556B2F;
+    margin: 15px 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.miembro p {
+    font-size: 1.1em; /* Tamaño del rol o descripción del miembro */
+    color: #8B4513;
+    line-height: 1.6;
+}
+
 .miembro img {
-    width: 100%;
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px; /* Tamaño fijo para las imágenes */
     border-radius: 50%;
-    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Mantiene la proporción sin distorsión */
+    border: 3px solid #A0522D; /* Borde decorativo */
 }
 
 /* Estilos para Eventos */
